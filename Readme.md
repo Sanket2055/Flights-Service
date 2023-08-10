@@ -49,3 +49,17 @@ src folder : - to avoid tests folder to be deployed to production - we will writ
 }
 
 ```
+
+after adding config.json file, run `npx sequelize-cli db:create` to create the database
+
+
+### DB design
+    -Airplane Table
+    -Flight Table
+    -AirPort Table
+    -City Table
+
+
+
+
+note: migrations help us to do incremental changes to the database
