@@ -66,3 +66,9 @@ note: migrations help us to do incremental changes to the database
    2-1. model level constraints
    2-2. database level constraints
    no need to call database when model level constraints are violated
+
+## Tables
+
+### city table : - id - name - createdAt - updatedAt
+### airport table : - id - name - address -cityId - createdAt - updatedAt
+    Relationship: - city has many airports - airport belongs to city (one to many)
