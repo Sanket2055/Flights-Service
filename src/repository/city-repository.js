@@ -38,7 +38,7 @@ class CityRepository {
             city.name = data.name;
             await city.save();
             return city;
- 
+
         }
         catch (error) {
             console.log("something went wrong in repository", error);
@@ -50,6 +50,17 @@ class CityRepository {
         try {
             const city = await City.findOne({ where: { id } });
             return city;
+        }
+        catch (error) {
+            console.log("something went wrong in repository", error);
+            throw { error };
+        }
+    }
+
+    async getAllCities() {
+        try {
+            const cities = await City.findAll();
+            return cities;
         }
         catch (error) {
             console.log("something went wrong in repository", error);
