@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// ORM - Object Relational Mapper - a library that allows us to interact with a relational database using an object-oriented paradigm. This allows us to write JavaScript code to interact with a database instead of SQL queries.
-
 
 const { PORT } = require('./config/serverConfig');
 
@@ -18,11 +16,11 @@ const setupAndStartServer = async () => {
     app.use(bodyParser.urlencoded({ extended: true }));
     // tells Express to parse the body of requests that have a Content-Type header of application/x-www-form-urlencoded
 
-    app.listen(PORT, () => {
+    app.listen(PORT, async () => {
         console.log('Server is running on port ' + PORT);
-
     });
 }
 
 setupAndStartServer();
 
+// ORM - Object Relational Mapper - a library that allows us to interact with a relational database using an object-oriented paradigm. This allows us to write JavaScript code to interact with a database instead of SQL queries.
