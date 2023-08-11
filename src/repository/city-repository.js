@@ -13,8 +13,9 @@ class CityRepository {
 
     }
 
-    async deleteCity({ id }) {
+    async deleteCity(id) {
         try {
+
             await City.destroy({ where: { id } });
             return true;
         }
@@ -36,7 +37,7 @@ class CityRepository {
         }
     }
 
-    async getCity({ id }) {
+    async getCity(id) {
         try {
             const city = await City.findOne({ where: { id } });
             return city;
