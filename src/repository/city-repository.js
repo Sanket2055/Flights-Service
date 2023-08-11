@@ -25,11 +25,20 @@ class CityRepository {
         }
     }
 
-    async updateCity({ cityId, data }) {
+    async updateCity(id, data) {
         // data = { name: "new name" }
         try {
-            const city = await City.update(data, { where: { cityId } });
+            // ! approach 1 : does not return updated data
+            // const city = await City.update(data, {
+            //     where: { id },
+            // });
+            // return city;
+            // ! approach 2 : returns updated data
+            const city = await City.findOne({ where: { id } });
+            city.name = data.name;
+            await city.save();
             return city;
+ 
         }
         catch (error) {
             console.log("something went wrong in repository", error);
