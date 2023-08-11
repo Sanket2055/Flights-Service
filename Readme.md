@@ -51,15 +51,18 @@ src folder : - to avoid tests folder to be deployed to production - we will writ
 ```
 
 after adding config.json file, run `npx sequelize-cli db:create` to create the database
-
+run `npx sequelize-cli db:migrate` to create the tables
 
 ### DB design
+
     -Airplane Table
     -Flight Table
     -AirPort Table
     -City Table
 
-
-
-
 note: migrations help us to do incremental changes to the database
+
+2. sequelize gives us two level constraints
+   2-1. model level constraints
+   2-2. database level constraints
+   no need to call database when model level constraints are violated
