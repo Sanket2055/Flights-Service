@@ -27,7 +27,7 @@ class CityService {
         }
     }
 
-    async updateCity(cityId, data   ) {
+    async updateCity(cityId, data) {
         // data = { name: "new name" }
         try {
             const city = await this.CityRepository.updateCity({ cityId, data });
@@ -51,3 +51,5 @@ class CityService {
     }
 
 }
+
+module.exports = CityService;

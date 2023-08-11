@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const ApiRoutes = require('./routes/index');
 
 const { PORT } = require('./config/serverConfig');
 
@@ -15,6 +15,8 @@ const setupAndStartServer = async () => {
 
     app.use(bodyParser.urlencoded({ extended: true }));
     // tells Express to parse the body of requests that have a Content-Type header of application/x-www-form-urlencoded
+
+    app.use("/api", ApiRoutes);
 
     app.listen(PORT, async () => {
         console.log('Server is running on port ' + PORT);
