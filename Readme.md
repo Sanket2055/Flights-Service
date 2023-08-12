@@ -70,5 +70,9 @@ note: migrations help us to do incremental changes to the database
 ## Tables
 
 ### city table : - id - name - createdAt - updatedAt
+
 ### airport table : - id - name - address -cityId - createdAt - updatedAt
+
     Relationship: - city has many airports - airport belongs to city (one to many)
+
+`npx sequelize model:generate --name Airport --attributes name:String, cityId:Integer`
