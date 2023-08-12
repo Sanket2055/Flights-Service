@@ -4,7 +4,7 @@ const ApiRoutes = require('./routes/index');
 
 const { PORT } = require('./config/serverConfig');
 const db = require('./models/index');
-const { City, Airport } = require('./models/index');
+const { City, Airport, Airplane } = require('./models/index');
 const sequelize = require("sequelize")
 const setupAndStartServer = async () => {
     const app = express();
