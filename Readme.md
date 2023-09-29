@@ -76,3 +76,5 @@ note: migrations help us to do incremental changes to the database
     Relationship: - city has many airports - airport belongs to city (one to many)
 
 `npx sequelize model:generate --name Airport --attributes name:String, cityId:Integer`
+
+
