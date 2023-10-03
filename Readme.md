@@ -33,8 +33,6 @@ note:
     config: configuration files
 ```
 
-src folder : - to avoid tests folder to be deployed to production - we will write test outside the src folder - we will gitignore test static and others
-
 ### steps to run:
 
 1. `npm install` on root folder
@@ -72,14 +70,20 @@ note: migrations help us to do incremental changes to the database
    2-2. database level constraints
    no need to call database when model level constraints are violated
 
-## Tables
+Other services:
+<!-- links of servicess -->
+<!-- https://github.com/Sanket2055/Auth_Service -->
+<!-- https://github.com/Sanket2055/ReminderService -->
+<!-- https://github.com/Sanket2055/AirTicketBookingService -->
 
-### city table : - id - name - createdAt - updatedAt
+1. [Auth Service](https://github.com/Sanket2055/Auth_Service)
 
-### airport table : - id - name - address -cityId - createdAt - updatedAt
+2. [Reminder Service](https://github.com/Sanket2055/ReminderService)
 
-    Relationship: - city has many airports - airport belongs to city (one to many)
-
-`npx sequelize model:generate --name Airport --attributes name:String, cityId:Integer`
+3. [Booking Service](https://github.com/Sanket2055/AirTicketBookingService)
 
 
+### API GATEWAY
+<!-- https://github.com/Sanket2055/API_Gateway -->
+
+1. [API Gateway](https://github.com/Sanket2055/API_Gateway)
