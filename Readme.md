@@ -1,3 +1,8 @@
+![Design](image.png)
+<!-- ![Alt text](image-1.png) -->
+
+ER Diagram:
+![Alt text](image-2.png)
 ```
 Flights and Search Service/
 ├─ src/
